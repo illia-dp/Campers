@@ -1,0 +1,31 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  transition: var(--animation);
+  border-radius: 200px;
+}
+
+.confirm {
+  background-color: var(--button);
+  color: var(--white);
+}
+
+.confirm:hover {
+  background-color: var(--button-hover);
+}
+
+.more {
+  border: 1px solid var(--gray-light);
+  background-color: transparent;
+  color: var(--main);
+}
+
+.more:hover {
+  border: 1px solid var(--button-hover);
+}

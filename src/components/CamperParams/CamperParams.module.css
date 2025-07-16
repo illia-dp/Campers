@@ -1,0 +1,27 @@
+.parameters {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.parametr {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 100px;
+  padding: 12px 18px;
+  width: fit-content;
+  height: 48px;
+  background-color: var(--badges);
+  mix-blend-mode: multiply;
+}
+
+.parametrName {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  color: var(--main);
+}

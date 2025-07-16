@@ -1,0 +1,49 @@
+.title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.subtitile {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--gray);
+  margin-bottom: 24px;
+}
+
+.inputWrapper {
+  margin-bottom: 14px;
+  position: relative;
+}
+
+.input {
+  border-radius: 12px;
+  padding: 18px;
+  width: 527px;
+  height: 60px;
+  background-color: var(--inputs);
+  outline: transparent;
+  border: none;
+}
+
+.textarea {
+  height: 118px;
+  resize: none;
+}
+
+.button {
+  margin-top: 10px;
+  margin: 0 auto;
+  width: 166px;
+  height: 56px;
+}
+
+.error {
+  position: absolute;
+  bottom: -14px;
+  font-size: 12px;
+  padding: 0 18px;
+  color: var(--button);
+}
