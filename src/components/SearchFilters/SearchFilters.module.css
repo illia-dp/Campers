@@ -1,5 +1,5 @@
 .wrapper {
-  width: 360px;
+  width: 335px;
 }
 
 .title {
@@ -8,6 +8,7 @@
   line-height: 1.5;
   color: var(--text);
   margin-bottom: 32px;
+  width: 323px;
 }
 
 .inputWrapper {
@@ -23,15 +24,16 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 8px;
+  width: 323px;
 }
 
-.intut {
+.input {
   border: none;
   outline: transparent;
   background-color: var(--inputs);
   border-radius: 12px;
   padding: 16px 20px 16px 48px;
-  width: 360px;
+  width: 323px;
   height: 56px;
 }
 
@@ -45,7 +47,7 @@
   font-weight: 600;
   font-size: 20px;
   line-height: 1.2;
-  width: 100%;
+  width: 323px;
   margin-bottom: 24px;
   border-bottom: 1px solid var(--gray-light);
   padding-bottom: 24px;
@@ -73,8 +75,8 @@
   justify-content: center;
   border: 1px solid var(--gray-light);
   border-radius: 12px;
-  width: 112px;
-  height: 96px;
+  width: 100px;
+  height: 90px;
   transition: var(--animation);
   cursor: pointer;
 }
@@ -89,18 +91,59 @@
 
 .parametrName {
   font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
+  font-size: 14px;
+  line-height: 1.2;
   letter-spacing: -0.01em;
   text-align: center;
 }
 
 .buttons {
   display: flex;
-  gap: 24px;
+  gap: 8px;
 }
 
 .button {
-  width: 166px;
+  width: 156px;
   height: 56px;
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper {
+    width: 360px;
+  }
+
+  .title {
+    width: 100%;
+  }
+
+  .locationLabel {
+    width: 100%;
+  }
+
+  .input {
+    width: 360px;
+  }
+
+  .label {
+    width: 100%;
+  }
+
+  .checkboxBtn {
+    width: 112px;
+    height: 96px;
+  }
+
+  .parametrName {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .buttons {
+    gap: 24px;
+  }
+
+  .button {
+    width: 166px;
+    height: 56px;
+  }
 }

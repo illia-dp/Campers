@@ -34,7 +34,10 @@ const CampersListItem = ({ camper }) => {
           <div className={css.price}>
             <p className={css.priceSum}>€{camper.price.toFixed(2)}</p>
 
-            <button onClick={() => handleLikeToggle(camper.id)}>
+            <button
+              className={css.likeBtn}
+              onClick={() => handleLikeToggle(camper.id)}
+            >
               <svg width="26" height="24">
                 <use
                   className={`${css.likeIcon} ${isLiked ? css.liked : ""}`}

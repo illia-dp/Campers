@@ -1,15 +1,17 @@
 import { useEffect, useRef, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { openMobileMenu } from "../../redux/campers/slice";
+import MobileMenu from "../MobileMenu/MobileMenu";
 import Container from "../Container/Container";
+import NavList from "../NavList/NavList";
 import sprite from "../../assets/sprite.svg";
-import clsx from "clsx";
 import css from "./Header.module.css";
 
-const addActive = ({ isActive }) => {
-  return clsx(css.link, isActive && css.active);
-};
-
 const Header = () => {
+  const dispatch = useDispatch();
+
   const [isScrollingDown, setIsScrollingDown] = useState(false);
   const prevScrollY = useRef(0);
 
@@ -43,17 +45,17 @@ const Header = () => {
             </svg>
           </Link>
           <div className={css.nav}>
-            <NavLink className={addActive} to="/" aria-label="link to home">
-              Home
-            </NavLink>
-            <NavLink
-              className={addActive}
-              to="/catalog"
-              aria-label="link to catalog"
-            >
-              Catalog
-            </NavLink>
+            <NavList />
           </div>
+
+          <button
+            className={css.mobileMenuBtn}
+            onClick={() => dispatch(openMobileMenu())}
+          >
+            <GiHamburgerMenu className={css.icon} />
+          </button>
+
+          <MobileMenu />
         </div>
       </Container>
     </header>

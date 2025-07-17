@@ -1,5 +1,10 @@
 .wrapper {
-  width: 888px;
+  width: 100%;
+}
+
+.filterBtn {
+  width: 100%;
+  height: 56px;
 }
 
 .list {
@@ -8,9 +13,22 @@
   gap: 32px;
 }
 
-.button {
+.loadMore {
   margin: 0 auto;
   width: 145px;
   height: 56px;
   margin-top: 40px;
+}
+
+@media screen and (min-width: 768px) {
+}
+
+@media screen and (min-width: 1440px) {
+  .wrapper {
+    width: 888px;
+  }
+
+  .filterBtn {
+    display: none;
+  }
 }

@@ -33,30 +33,28 @@
   display: none;
 }
 
-.link {
-  display: flex;
-  align-items: center;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
+.mobileMenuBtn {
+  cursor: pointer;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
   color: var(--main);
-  height: 72px;
   transition: var(--animation);
 }
 
-.link:hover {
-  color: var(--button-hover);
-}
-
-.active {
+.mobileMenuBtn:hover .icon {
   color: var(--button-hover);
 }
 
 @media screen and (min-width: 768px) {
   .nav {
     display: flex;
-    align-items: center;
-    gap: 32px;
+  }
+
+  .mobileMenuBtn {
+    display: none;
   }
 }
 

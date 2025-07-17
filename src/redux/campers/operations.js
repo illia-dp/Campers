@@ -6,7 +6,7 @@ export const instance = axios.create({
 });
 
 export const getCampers = createAsyncThunk(
-  "campers/getAll",
+  "campers/getCampers",
   async ({ page = 1, limit = 4, searchParams }, { rejectWithValue }) => {
     const params = {
       page,

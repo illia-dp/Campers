@@ -11,7 +11,10 @@ const CamperFeatures = () => {
   return (
     <div className={css.wrapper}>
       <div className={css.features}>
-        <CamperParams camper={camper} />
+        <div className={css.paramsWrapper}>
+          <CamperParams camper={camper} />
+        </div>
+
         <VehicleDetails />
       </div>
       <div className={css.form}>

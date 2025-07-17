@@ -14,6 +14,7 @@ import Section from "../../components/Section/Section";
 import Loader from "../../components/Loader/Loader";
 import Error from "../../components/Error/Error";
 import css from "./CatalogPage.module.css";
+import FiltersButton from "../../components/FiltersButton/FiltersButton";
 
 const CatalogPage = () => {
   const dispatch = useDispatch();
@@ -33,8 +34,12 @@ const CatalogPage = () => {
         {loading && <Loader />}
 
         <div className={css.contentWrapper}>
-          <SearchFilters />
+          <div className={css.filtes}>
+            <SearchFilters />
+          </div>
+
           {error ? <Error /> : <CampersList />}
+          <FiltersButton />
         </div>
       </Section>
     </Container>

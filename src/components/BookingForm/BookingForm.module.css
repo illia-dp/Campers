@@ -21,7 +21,7 @@
 .input {
   border-radius: 12px;
   padding: 18px;
-  width: 527px;
+  width: 245px;
   height: 60px;
   background-color: var(--inputs);
   outline: transparent;
@@ -46,4 +46,13 @@
   font-size: 12px;
   padding: 0 18px;
   color: var(--button);
+}
+
+@media screen and (min-width: 768px) {
+  .input {
+    width: 582px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
 }

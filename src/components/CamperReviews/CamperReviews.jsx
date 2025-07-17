@@ -11,7 +11,7 @@ const CamperReviews = () => {
   return (
     <div className={css.wrapper}>
       <div className={css.reviews}>
-        <ul>
+        <ul className={css.reviewsList}>
           {camper.reviews.map((review, index) => (
             <li className={css.review} key={index}>
               <div className={css.user}>

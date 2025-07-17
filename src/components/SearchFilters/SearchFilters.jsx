@@ -2,11 +2,15 @@ import { Field, Form, Formik } from "formik";
 import { useDispatch, useSelector } from "react-redux";
 import {
   clearSearchParams,
+  closeFiltersMenu,
   resetPage,
   setSearchParams,
 } from "../../redux/campers/slice";
 import { useId } from "react";
-import { selectSearchParams } from "../../redux/campers/selectors";
+import {
+  selctIsFiltersMenuOpen,
+  selectSearchParams,
+} from "../../redux/campers/selectors";
 import SyncSearchParams from "../SyncSearchParams/SyncSearchParams";
 import Button from "../Button/Button";
 import sprite from "../../assets/sprite.svg";
@@ -16,14 +20,17 @@ const SearchFilters = () => {
   const locationId = useId();
   const dispatch = useDispatch();
   const searchParams = useSelector(selectSearchParams);
+  const filtersMenuOpen = useSelector(selctIsFiltersMenuOpen);
 
   const handleSubmit = (values) => {
     dispatch(setSearchParams(values));
+    if (filtersMenuOpen) dispatch(closeFiltersMenu());
   };
 
   const handleReset = () => {
     dispatch(resetPage());
     dispatch(clearSearchParams());
+    if (filtersMenuOpen) dispatch(closeFiltersMenu());
   };
 
   const equipmentOptions = [
@@ -59,7 +66,7 @@ const SearchFilters = () => {
                 Location
               </label>
               <Field
-                className={css.intut}
+                className={css.input}
                 type="text"
                 name="location"
                 id={locationId}

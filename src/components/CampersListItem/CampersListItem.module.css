@@ -1,35 +1,35 @@
 .item {
-  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
   border: 1px solid var(--gray-light);
   border-radius: 20px;
-  padding: 24px;
-  height: 368px;
-  display: flex;
   gap: 24px;
   overflow: hidden;
 }
 
 .imageThumb {
   border-radius: 10px;
-  width: 292px;
-  height: 320px;
+  width: 100%;
+  height: 150px;
   overflow: hidden;
 }
 
 .image {
   object-fit: cover;
-  height: 100%;
+  width: 100%;
   object-position: 85% 50%;
 }
 
 .information {
-  width: 524px;
+  width: 100%;
 }
 
 .namePrice {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 8px;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 16px;
 }
 
 .camperName {
@@ -44,6 +44,7 @@
 .price {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 12px;
 }
 
@@ -58,12 +59,17 @@
   transition: var(--animation);
 }
 
+.likeBtn:hover .likeIcon {
+  fill: var(--button);
+}
+
 .likeIcon.liked {
   fill: var(--button);
 }
 
 .ratingLocation {
   display: flex;
+  justify-content: space-between;
   gap: 16px;
   margin-bottom: 24px;
 }
@@ -119,6 +125,65 @@
 }
 
 .button {
+  margin: 0 auto;
   width: 166px;
   height: 56px;
+}
+
+@media screen and (min-width: 768px) {
+  .imageThumb {
+    border-radius: 10px;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+  }
+
+  .namePrice {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 8px;
+  }
+
+  .description {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--text);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-bottom: 24px;
+  }
+
+  .ratingLocation {
+    justify-content: flex-start;
+  }
+
+  .button {
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .item {
+    display: flex;
+    flex-direction: row;
+    padding: 24px;
+  }
+
+  .imageThumb {
+    border-radius: 10px;
+    width: 292px;
+    height: 320px;
+    overflow: hidden;
+  }
+
+  .image {
+    height: 100%;
+  }
+
+  .information {
+    width: 524px;
+  }
 }

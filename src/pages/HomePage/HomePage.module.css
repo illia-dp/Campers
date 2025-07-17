@@ -3,7 +3,7 @@
   height: 696px;
   background-image: url("../../img/hero/Camper.webp");
   background-size: cover;
-  background-position: center;
+  background-position: 30%;
   background-repeat: no-repeat;
 
   display: flex;
@@ -20,9 +20,9 @@
 .title {
   font-weight: 600;
   font-size: 48px;
-  line-height: 0.7;
+  line-height: 1;
   color: var(--inputs);
-  margin-bottom: 16px;
+  margin-bottom: 24px;
 }
 
 .text {
@@ -36,4 +36,35 @@
 .button {
   width: 173px;
   height: 56px;
+}
+
+@media screen and (min-width: 758px) {
+  .hero {
+    background-position: 25%;
+  }
+
+  .title {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 0.7;
+    margin-bottom: 16px;
+  }
+
+  .text {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.3;
+    margin-bottom: 40px;
+  }
+
+  .button {
+    width: 173px;
+    height: 56px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .hero {
+    background-position: center;
+  }
 }

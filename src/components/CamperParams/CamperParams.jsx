@@ -5,7 +5,7 @@ const CamperParams = ({ camper }) => {
   return (
     <div className={css.parameters}>
       <div className={css.parametr}>
-        <svg width="20" height="20">
+        <svg className={css.iconWrapper}>
           <use xlinkHref={`${sprite}#icon-transmission`} />
         </svg>
         <p className={css.parametrName}>
@@ -15,7 +15,7 @@ const CamperParams = ({ camper }) => {
       </div>
 
       <div className={css.parametr}>
-        <svg width="20" height="20">
+        <svg className={css.iconWrapper}>
           <use xlinkHref={`${sprite}#icon-fuel-pump`} />
         </svg>
         <p className={css.parametrName}>
@@ -25,7 +25,7 @@ const CamperParams = ({ camper }) => {
 
       {camper.kitchen && (
         <div className={css.parametr}>
-          <svg width="20" height="20">
+          <svg className={css.iconWrapper}>
             <use xlinkHref={`${sprite}#kitchen`} />
           </svg>
           <p className={css.parametrName}>Kitchen</p>
@@ -34,7 +34,7 @@ const CamperParams = ({ camper }) => {
 
       {camper.AC && (
         <div className={css.parametr}>
-          <svg width="20" height="20">
+          <svg className={css.iconWrapper}>
             <use xlinkHref={`${sprite}#icon-wind`} />
           </svg>
           <p className={css.parametrName}>AC</p>
@@ -43,7 +43,7 @@ const CamperParams = ({ camper }) => {
 
       {camper.bathroom && (
         <div className={css.parametr}>
-          <svg width="20" height="20">
+          <svg className={css.iconWrapper}>
             <use xlinkHref={`${sprite}#icon-ph_shower`} />
           </svg>
           <p className={css.parametrName}>Bathroom</p>
@@ -52,7 +52,7 @@ const CamperParams = ({ camper }) => {
 
       {camper.TV && (
         <div className={css.parametr}>
-          <svg width="20" height="20">
+          <svg className={css.iconWrapper}>
             <use xlinkHref={`${sprite}#icon-tv`} />
           </svg>
           <p className={css.parametrName}>TV</p>
@@ -61,7 +61,7 @@ const CamperParams = ({ camper }) => {
 
       {camper.gas && (
         <div className={css.parametr}>
-          <svg width="20" height="20">
+          <svg className={css.iconWrapper}>
             <use xlinkHref={`${sprite}#icon-hugeicons_gas`} />
           </svg>
           <p className={css.parametrName}>Gas</p>
@@ -70,7 +70,7 @@ const CamperParams = ({ camper }) => {
 
       {camper.radio && (
         <div className={css.parametr}>
-          <svg width="20" height="20">
+          <svg className={css.iconWrapper}>
             <use xlinkHref={`${sprite}#icon-radio`} />
           </svg>
           <p className={css.parametrName}>Radio</p>
@@ -79,7 +79,7 @@ const CamperParams = ({ camper }) => {
 
       {camper.microwave && (
         <div className={css.parametr}>
-          <svg width="20" height="20">
+          <svg className={css.iconWrapper}>
             <use xlinkHref={`${sprite}#icon-microwave`} />
           </svg>
           <p className={css.parametrName}>Microwave</p>
@@ -88,7 +88,7 @@ const CamperParams = ({ camper }) => {
 
       {camper.refrigerator && (
         <div className={css.parametr}>
-          <svg width="20" height="20">
+          <svg className={css.iconWrapper}>
             <use xlinkHref={`${sprite}#icon-solar_fridge`} />
           </svg>
           <p className={css.parametrName}>Refrigerator</p>
@@ -97,7 +97,7 @@ const CamperParams = ({ camper }) => {
 
       {camper.water && (
         <div className={css.parametr}>
-          <svg width="20" height="20">
+          <svg className={css.iconWrapper}>
             <use xlinkHref={`${sprite}#icon-ion_water`} />
           </svg>
           <p className={css.parametrName}>Water</p>

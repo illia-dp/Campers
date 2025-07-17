@@ -3,13 +3,14 @@
   align-items: center;
   gap: 8px;
   flex-wrap: wrap;
+  padding-right: 8px;
 }
 
 .parametr {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 4px;
   border-radius: 100px;
   padding: 12px 18px;
   width: fit-content;
@@ -18,10 +19,34 @@
   mix-blend-mode: multiply;
 }
 
+.iconWrapper {
+  height: 16px;
+  width: 16px;
+}
+
 .parametrName {
   font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
+  font-size: 14px;
+  line-height: 1.2;
   text-align: center;
   color: var(--main);
+}
+
+@media screen and (min-width: 768px) {
+  .parameters {
+    padding-right: 0px;
+  }
+
+  .parametr {
+    gap: 8px;
+  }
+
+  .iconWrapper {
+    height: 20px;
+    width: 20px;
+  }
+  .parametrName {
+    font-size: 16px;
+    line-height: 1.5;
+  }
 }

@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { setPage } from "../../redux/campers/slice";
+import { openFiltersMenu, setPage } from "../../redux/campers/slice";
 import {
   selectCampers,
   selectPage,
@@ -7,6 +7,7 @@ import {
 } from "../../redux/campers/selectors";
 import CampersListItem from "../CampersListItem/CampersListItem";
 import Button from "../Button/Button";
+import SearchMenu from "../SearchMenu/SearchMenu";
 import css from "./CampersList.module.css";
 
 function CampersList() {
@@ -23,6 +24,13 @@ function CampersList() {
   return (
     <div className={css.wrapper}>
       <div className={css.list}>
+        <Button
+          className={css.filterBtn}
+          style="more"
+          onClick={() => dispatch(openFiltersMenu())}
+        >
+          Filters
+        </Button>
         {campers.length !== 0 &&
           campers.map((camper) => (
             <CampersListItem key={camper.id} camper={camper} />
@@ -30,10 +38,12 @@ function CampersList() {
       </div>
 
       {totalPages > 0 && page !== totalPages && (
-        <Button className={css.button} style="more" onClick={handleLoadMore}>
+        <Button className={css.loadMore} style="more" onClick={handleLoadMore}>
           Load more
         </Button>
       )}
+
+      <SearchMenu />
     </div>
   );
 }

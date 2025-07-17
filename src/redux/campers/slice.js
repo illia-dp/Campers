@@ -18,6 +18,8 @@ const slice = createSlice({
       equipment: [],
       form: "",
     },
+    filtersMenuIsOpen: false,
+    mobileMenuIsOpen: false,
   },
   reducers: {
     setPage(state, { payload }) {
@@ -46,6 +48,18 @@ const slice = createSlice({
         equipment: [],
         form: "",
       };
+    },
+    openFiltersMenu(state) {
+      state.filtersMenuIsOpen = true;
+    },
+    closeFiltersMenu(state) {
+      state.filtersMenuIsOpen = false;
+    },
+    openMobileMenu(state) {
+      state.mobileMenuIsOpen = true;
+    },
+    closeMobileMenu(state) {
+      state.mobileMenuIsOpen = false;
     },
   },
   extraReducers: (builder) => {
@@ -97,5 +111,9 @@ export const {
   toggleLike,
   setSearchParams,
   clearSearchParams,
+  openFiltersMenu,
+  closeFiltersMenu,
+  openMobileMenu,
+  closeMobileMenu,
 } = slice.actions;
 export const campersReducer = slice.reducer;
