@@ -1,11 +1,11 @@
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import { useId } from "react";
-import CustomDatePicker from "../CustomDatePicker/CustomDatePicker";
-import clsx from "clsx";
-import Button from "../Button/Button";
 import { validationBookingSchema } from "../../validation/validation";
-import css from "./BookingForm.module.css";
+import CustomDatePicker from "../CustomDatePicker/CustomDatePicker";
+import Button from "../Button/Button";
 import toast from "react-hot-toast";
+import clsx from "clsx";
+import css from "./BookingForm.module.css";
 
 const BookingForm = () => {
   const dateId = useId();

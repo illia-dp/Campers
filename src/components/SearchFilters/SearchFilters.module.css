@@ -1,3 +1,106 @@
 .wrapper {
   width: 360px;
 }
+
+.title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text);
+  margin-bottom: 32px;
+}
+
+.inputWrapper {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.locationLabel {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--gray);
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px;
+}
+
+.intut {
+  border: none;
+  outline: transparent;
+  background-color: var(--inputs);
+  border-radius: 12px;
+  padding: 16px 20px 16px 48px;
+  width: 360px;
+  height: 56px;
+}
+
+.icon {
+  position: absolute;
+  left: 16px;
+  transform: translateY(90%);
+}
+
+.label {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  width: 100%;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--gray-light);
+  padding-bottom: 24px;
+}
+
+.equipmentList {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 8px;
+  column-gap: 12px;
+  margin-bottom: 32px;
+}
+
+.checkbox {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.checkboxBtn {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--gray-light);
+  border-radius: 12px;
+  width: 112px;
+  height: 96px;
+  transition: var(--animation);
+  cursor: pointer;
+}
+
+.checkboxBtn:hover {
+  border: 1px solid var(--button);
+}
+
+.checkbox:checked + .checkboxBtn {
+  border: 1px solid var(--button);
+}
+
+.parametrName {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+  gap: 24px;
+}
+
+.button {
+  width: 166px;
+  height: 56px;
+}

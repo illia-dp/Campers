@@ -7,13 +7,29 @@ export const instance = axios.create({
 
 export const getCampers = createAsyncThunk(
   "campers/getAll",
-  async ({ page = 1, limit = 4 }, { rejectWithValue }) => {
+  async ({ page = 1, limit = 4, searchParams }, { rejectWithValue }) => {
+    const params = {
+      page,
+      limit,
+    };
+
+    if (searchParams.location && searchParams.location) {
+      params.location = searchParams.location;
+    }
+
+    if (searchParams.equipment && searchParams.equipment.length > 0) {
+      searchParams.equipment.forEach((item) => {
+        params[item] = true;
+      });
+    }
+
+    if (searchParams.form && searchParams.form) {
+      params.form = searchParams.form;
+    }
+
     try {
       const { data } = await instance.get("/campers", {
-        params: {
-          page,
-          limit,
-        },
+        params,
       });
       return data;
     } catch (error) {

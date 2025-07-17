@@ -1,10 +1,10 @@
 import { NavLink, Outlet, useParams } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
+import { selectCamperInfo } from "../../redux/campers/selectors";
+import { getCamperInfo } from "../../redux/campers/operations";
 import Container from "../Container/Container";
 import Section from "../Section/Section";
-import { useDispatch, useSelector } from "react-redux";
-import { getCamperInfo } from "../../redux/campers/operations";
-import { selectCamperInfo } from "../../redux/campers/selectors";
 import sprite from "../../assets/sprite.svg";
 import clsx from "clsx";
 import css from "./CamperDetails.module.css";

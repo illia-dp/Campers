@@ -13,6 +13,11 @@ const slice = createSlice({
     error: null,
     page: 1,
     likedCampers: [],
+    searchParams: {
+      location: "",
+      equipment: [],
+      form: "",
+    },
   },
   reducers: {
     setPage(state, { payload }) {
@@ -21,8 +26,8 @@ const slice = createSlice({
     resetPage(state) {
       state.page = 1;
     },
-    toggleLike: (state, action) => {
-      const { id } = action.payload;
+    toggleLike: (state, { payload }) => {
+      const { id } = payload;
 
       if (state.likedCampers.includes(id)) {
         state.likedCampers = state.likedCampers.filter(
@@ -31,6 +36,16 @@ const slice = createSlice({
       } else {
         state.likedCampers.push(id);
       }
+    },
+    setSearchParams(state, { payload }) {
+      state.searchParams = payload;
+    },
+    clearSearchParams(state) {
+      state.searchParams = {
+        location: "",
+        equipment: [],
+        form: "",
+      };
     },
   },
   extraReducers: (builder) => {
@@ -44,13 +59,17 @@ const slice = createSlice({
         state.error = null;
         state.items.total = payload.total;
 
-        state.items.items = [
-          ...state.items.items,
-          ...payload.items.filter(
-            (item) =>
-              !state.items.items.some((existing) => existing.id === item.id)
-          ),
-        ];
+        if (state.page === 1) {
+          state.items.items = payload.items;
+        } else {
+          state.items.items = [
+            ...state.items.items,
+            ...payload.items.filter(
+              (item) =>
+                !state.items.items.some((existing) => existing.id === item.id)
+            ),
+          ];
+        }
       })
       .addCase(getCampers.rejected, (state, { payload }) => {
         state.isLoading = false;
@@ -72,5 +91,11 @@ const slice = createSlice({
   },
 });
 
-export const { setPage, resetPage, toggleLike } = slice.actions;
+export const {
+  setPage,
+  resetPage,
+  toggleLike,
+  setSearchParams,
+  clearSearchParams,
+} = slice.actions;
 export const campersReducer = slice.reducer;

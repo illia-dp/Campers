@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import Button from "../../components/Button/Button";
 import Container from "../../components/Container/Container";
+import Button from "../../components/Button/Button";
 import css from "./HomePage.module.css";
 
 const HomePage = () => {

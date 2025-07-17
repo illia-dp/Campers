@@ -1,9 +1,9 @@
+import { useEffect, useRef, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import Container from "../Container/Container";
 import sprite from "../../assets/sprite.svg";
-import css from "./Header.module.css";
 import clsx from "clsx";
-import { useEffect, useRef, useState } from "react";
+import css from "./Header.module.css";
 
 const addActive = ({ isActive }) => {
   return clsx(css.link, isActive && css.active);
