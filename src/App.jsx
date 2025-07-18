@@ -24,6 +24,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/catalog" element={<CatalogPage />} />
             <Route path="/catalog/:id" element={<DetailsPage />}>
+              <Route index element={<Navigate to="features" />} />
               <Route path="features" element={<CamperFeatures />} />
               <Route path="reviews" element={<CamperReviews />} />
             </Route>
