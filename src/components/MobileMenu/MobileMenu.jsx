@@ -40,7 +40,7 @@ const MobileMenu = () => {
       <div className={css.menu} onClick={(e) => e.stopPropagation()}>
         <button
           className={css.closeButton}
-          aria-label="Close modal"
+          aria-label="Close mobile menu"
           onClick={() => dispatch(closeMobileMenu())}
         >
           <CgClose className={css.closeIcon} />

@@ -35,6 +35,7 @@ const FiltersButton = () => {
       <Button
         className={`${css.filterBtn} ${isScrollingDown ? css.hidden : ""}`}
         onClick={() => dispatch(openFiltersMenu())}
+        aria-label="Open search menu"
       >
         Filters
       </Button>

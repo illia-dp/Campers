@@ -7,6 +7,6 @@ export const selectTotalPages = (state) =>
 export const selectCamperInfo = (state) => state.campers.camperInfo;
 export const selectLikedCampers = (state) => state.campers.likedCampers;
 export const selectSearchParams = (state) => state.campers.searchParams;
-export const selctIsFiltersMenuOpen = (state) =>
+export const selectIsFiltersMenuOpen = (state) =>
   state.campers.filtersMenuIsOpen;
 export const selectMobileMenuIsOpen = (state) => state.campers.mobileMenuIsOpen;

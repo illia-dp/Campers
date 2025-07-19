@@ -8,7 +8,7 @@ import {
 } from "../../redux/campers/slice";
 import { useId } from "react";
 import {
-  selctIsFiltersMenuOpen,
+  selectIsFiltersMenuOpen,
   selectSearchParams,
 } from "../../redux/campers/selectors";
 import SyncSearchParams from "../SyncSearchParams/SyncSearchParams";
@@ -20,7 +20,7 @@ const SearchFilters = () => {
   const locationId = useId();
   const dispatch = useDispatch();
   const searchParams = useSelector(selectSearchParams);
-  const filtersMenuOpen = useSelector(selctIsFiltersMenuOpen);
+  const filtersMenuOpen = useSelector(selectIsFiltersMenuOpen);
 
   const handleSubmit = (values) => {
     dispatch(setSearchParams(values));
@@ -84,9 +84,9 @@ const SearchFilters = () => {
             <div className={css.title}>Filters</div>
 
             <div className={css.label}>Vehicle equipment</div>
-            <div className={css.equipmentList}>
+            <ul className={css.equipmentList}>
               {equipmentOptions.map((option) => (
-                <div key={option.value} className={css.customCheckbox}>
+                <li key={option.value} className={css.customCheckbox}>
                   <Field
                     className={css.checkbox}
                     type="checkbox"
@@ -132,14 +132,14 @@ const SearchFilters = () => {
                     </svg>
                     <p className={css.parametrName}>{option.label}</p>
                   </div>
-                </div>
+                </li>
               ))}
-            </div>
+            </ul>
 
             <div className={css.label}>Vehicle type</div>
-            <div className={css.equipmentList}>
+            <ul className={css.equipmentList}>
               {typeOptions.map((option) => (
-                <div key={option.value} className={css.customCheckbox}>
+                <li key={option.value} className={css.customCheckbox}>
                   <Field
                     className={css.checkbox}
                     type="radio"
@@ -167,12 +167,16 @@ const SearchFilters = () => {
                     </svg>
                     <p className={css.parametrName}>{option.label}</p>
                   </div>
-                </div>
+                </li>
               ))}
-            </div>
+            </ul>
 
             <div className={css.buttons}>
-              <Button className={css.button} type="submit">
+              <Button
+                className={css.button}
+                type="submit"
+                aria-label="Search with selected filters"
+              >
                 Search
               </Button>
 
@@ -180,6 +184,7 @@ const SearchFilters = () => {
                 className={css.button}
                 type="button"
                 onClick={() => handleReset()}
+                aria-label="Clear filters"
               >
                 Reset
               </Button>

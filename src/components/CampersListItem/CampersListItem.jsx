@@ -18,7 +18,7 @@ const CampersListItem = ({ camper }) => {
   const isLiked = likedItems.includes(camper.id);
 
   return (
-    <div className={css.item} key={camper.id}>
+    <li className={css.item} key={camper.id}>
       <div className={css.imageThumb}>
         <img
           className={css.image}
@@ -37,6 +37,7 @@ const CampersListItem = ({ camper }) => {
             <button
               className={css.likeBtn}
               onClick={() => handleLikeToggle(camper.id)}
+              aria-label="add camper to favourite"
             >
               <svg width="26" height="24">
                 <use
@@ -84,12 +85,16 @@ const CampersListItem = ({ camper }) => {
         </div>
 
         <Link to={`/catalog/${camper.id}/features`}>
-          <Button className={css.button} style="confirm">
+          <Button
+            className={css.button}
+            style="confirm"
+            aria-label="Details about selected camper"
+          >
             Show more
           </Button>
         </Link>
       </div>
-    </div>
+    </li>
   );
 };
 

@@ -22,7 +22,7 @@ const NavList = () => {
       <NavLink
         className={addActive}
         to="/"
-        aria-label="link to home"
+        aria-label="Link to home"
         onClick={handleClick}
       >
         Home
@@ -30,7 +30,7 @@ const NavList = () => {
       <NavLink
         className={addActive}
         to="/catalog"
-        aria-label="link to catalog"
+        aria-label="Link to catalog"
         onClick={handleClick}
       >
         Catalog

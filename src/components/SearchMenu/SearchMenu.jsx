@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { createPortal } from "react-dom";
 import { useEffect } from "react";
-import { selctIsFiltersMenuOpen } from "../../redux/campers/selectors";
+import { selectIsFiltersMenuOpen } from "../../redux/campers/selectors";
 import { closeFiltersMenu } from "../../redux/campers/slice";
 import { CgClose } from "react-icons/cg";
 import SearchFilters from "../SearchFilters/SearchFilters";
@@ -10,7 +10,7 @@ import css from "./SearchMenu.module.css";
 
 const SearchModal = () => {
   const dispatch = useDispatch();
-  const filtersMenuOpen = useSelector(selctIsFiltersMenuOpen);
+  const filtersMenuOpen = useSelector(selectIsFiltersMenuOpen);
 
   useEffect(() => {
     const handleKeyDown = (e) => {
@@ -40,7 +40,7 @@ const SearchModal = () => {
       <div className={css.menu} onClick={(e) => e.stopPropagation()}>
         <button
           className={css.closeButton}
-          aria-label="Close modal"
+          aria-label="Close search menu"
           onClick={() => dispatch(closeFiltersMenu())}
         >
           <CgClose className={css.closeIcon} />

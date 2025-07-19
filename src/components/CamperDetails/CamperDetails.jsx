@@ -82,10 +82,18 @@ const CamperDetails = () => {
         </div>
 
         <div className={css.links}>
-          <NavLink className={addActive} to={"features"}>
+          <NavLink
+            className={addActive}
+            to={"features"}
+            aria-label="To features page"
+          >
             Features
           </NavLink>
-          <NavLink className={addActive} to={"reviews"}>
+          <NavLink
+            className={addActive}
+            to={"reviews"}
+            aria-label="To reviews page"
+          >
             Reviews
           </NavLink>
         </div>

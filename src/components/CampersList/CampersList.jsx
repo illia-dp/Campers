@@ -7,7 +7,6 @@ import {
 } from "../../redux/campers/selectors";
 import CampersListItem from "../CampersListItem/CampersListItem";
 import Button from "../Button/Button";
-import SearchMenu from "../SearchMenu/SearchMenu";
 import css from "./CampersList.module.css";
 
 function CampersList() {
@@ -23,11 +22,12 @@ function CampersList() {
 
   return (
     <div className={css.wrapper}>
-      <div className={css.list}>
+      <ul className={css.list}>
         <Button
           className={css.filterBtn}
           style="more"
           onClick={() => dispatch(openFiltersMenu())}
+          aria-label="button to open filter menu"
         >
           Filters
         </Button>
@@ -35,15 +35,18 @@ function CampersList() {
           campers.map((camper) => (
             <CampersListItem key={camper.id} camper={camper} />
           ))}
-      </div>
+      </ul>
 
       {totalPages > 0 && page !== totalPages && (
-        <Button className={css.loadMore} style="more" onClick={handleLoadMore}>
+        <Button
+          className={css.loadMore}
+          style="more"
+          onClick={handleLoadMore}
+          aria-label="Load more campers"
+        >
           Load more
         </Button>
       )}
-
-      <SearchMenu />
     </div>
   );
 }

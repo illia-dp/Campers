@@ -86,7 +86,12 @@ const BookingForm = () => {
             />
           </div>
 
-          <Button className={css.button} type="submit" style="confirm">
+          <Button
+            className={css.button}
+            type="submit"
+            style="confirm"
+            aria-label="submit booking form"
+          >
             Send
           </Button>
         </Form>

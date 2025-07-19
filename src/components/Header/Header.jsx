@@ -39,7 +39,7 @@ const Header = () => {
     <header className={`${css.header} ${isScrollingDown ? css.hidden : ""}`}>
       <Container>
         <div className={css.headerContent}>
-          <Link className={css.logoLink} to="/" aria-label="link to home">
+          <Link className={css.logoLink} to="/" aria-label="Link to home">
             <svg width="136" height="15">
               <use xlinkHref={`${sprite}#icon-Logo`} />
             </svg>
@@ -51,6 +51,7 @@ const Header = () => {
           <button
             className={css.mobileMenuBtn}
             onClick={() => dispatch(openMobileMenu())}
+            aria-label="Open mobile menu"
           >
             <GiHamburgerMenu className={css.icon} />
           </button>

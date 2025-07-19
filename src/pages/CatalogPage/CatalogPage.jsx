@@ -8,13 +8,14 @@ import {
 } from "../../redux/campers/selectors";
 import { getCampers } from "../../redux/campers/operations";
 import SearchFilters from "../../components/SearchFilters/SearchFilters";
+import FiltersButton from "../../components/FiltersButton/FiltersButton";
 import CampersList from "../../components/CampersList/CampersList";
+import SearchMenu from "../../components/SearchMenu/SearchMenu";
 import Container from "../../components/Container/Container";
 import Section from "../../components/Section/Section";
 import Loader from "../../components/Loader/Loader";
 import Error from "../../components/Error/Error";
 import css from "./CatalogPage.module.css";
-import FiltersButton from "../../components/FiltersButton/FiltersButton";
 
 const CatalogPage = () => {
   const dispatch = useDispatch();
@@ -29,20 +30,23 @@ const CatalogPage = () => {
   }, [dispatch, page, searchParams]);
 
   return (
-    <Container>
-      <Section>
-        {loading && <Loader />}
+    <div>
+      <Container>
+        <Section>
+          {loading && <Loader />}
 
-        <div className={css.contentWrapper}>
-          <div className={css.filtes}>
-            <SearchFilters />
+          <div className={css.contentWrapper}>
+            <div className={css.filtes}>
+              <SearchFilters />
+            </div>
+
+            {error ? <Error /> : <CampersList />}
+            <FiltersButton />
           </div>
-
-          {error ? <Error /> : <CampersList />}
-          <FiltersButton />
-        </div>
-      </Section>
-    </Container>
+        </Section>
+      </Container>
+      <SearchMenu />
+    </div>
   );
 };
 
