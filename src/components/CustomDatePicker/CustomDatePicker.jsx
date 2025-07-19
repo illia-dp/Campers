@@ -30,6 +30,7 @@ const CustomDatePicker = ({
       onChange={handleChange}
       dateFormat="MM-dd-yyyy"
       placeholderText="Booking date*"
+      onFocus={(e) => e.target.blur()}
       {...rest}
     />
   );

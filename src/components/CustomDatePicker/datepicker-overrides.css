@@ -7,7 +7,7 @@
 .react-datepicker-popper[data-placement^="bottom"] .react-datepicker__triangle,
 .react-datepicker-popper[data-placement^="top"] .react-datepicker__triangle {
   fill: var(--text);
-  color: var(--text);
+  color: var(--white);
 }
 
 .react-datepicker__navigation-icon--previous::before,
@@ -62,7 +62,7 @@
 .react-datepicker__day--selected {
   border-radius: 50%;
   background-color: var(--text);
-  color: var(--text);
+  color: var(--white);
 }
 
 .react-datepicker__day:not([aria-disabled="true"]):hover,
