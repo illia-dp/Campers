@@ -1,6 +1,6 @@
 .hero {
   width: 100%;
-  height: 696px;
+  height: calc(100vh - var(--header-height));
   background-image: url("../../img/hero/Camper.webp");
   background-size: cover;
   background-position: 30%;

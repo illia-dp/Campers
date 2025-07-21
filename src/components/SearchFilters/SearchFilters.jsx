@@ -1,5 +1,5 @@
-import { Field, Form, Formik } from "formik";
 import { useDispatch, useSelector } from "react-redux";
+import { Field, Form, Formik } from "formik";
 import {
   clearSearchParams,
   closeFiltersMenu,
@@ -16,20 +16,36 @@ import Button from "../Button/Button";
 import sprite from "../../assets/sprite.svg";
 import css from "./SearchFilters.module.css";
 
-const SearchFilters = () => {
+const SearchFilters = ({ setSearchParamsUrl }) => {
   const locationId = useId();
   const dispatch = useDispatch();
   const searchParams = useSelector(selectSearchParams);
   const filtersMenuOpen = useSelector(selectIsFiltersMenuOpen);
 
   const handleSubmit = (values) => {
+    const newSearchParams = new URLSearchParams();
+
+    if (values.location) {
+      newSearchParams.set("location", values.location);
+    }
+    if (values.equipment.length > 0) {
+      values.equipment.forEach((item) =>
+        newSearchParams.append("equipment", item)
+      );
+    }
+    if (values.form) {
+      newSearchParams.set("form", values.form);
+    }
+
+    setSearchParamsUrl(newSearchParams);
     dispatch(setSearchParams(values));
     if (filtersMenuOpen) dispatch(closeFiltersMenu());
   };
 
   const handleReset = () => {
-    dispatch(resetPage());
     dispatch(clearSearchParams());
+    dispatch(resetPage());
+    setSearchParamsUrl("");
     if (filtersMenuOpen) dispatch(closeFiltersMenu());
   };
 

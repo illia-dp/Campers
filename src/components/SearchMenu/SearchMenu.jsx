@@ -8,7 +8,7 @@ import SearchFilters from "../SearchFilters/SearchFilters";
 import clsx from "clsx";
 import css from "./SearchMenu.module.css";
 
-const SearchModal = () => {
+const SearchModal = ({ setSearchParamsUrl }) => {
   const dispatch = useDispatch();
   const filtersMenuOpen = useSelector(selectIsFiltersMenuOpen);
 
@@ -46,7 +46,7 @@ const SearchModal = () => {
           <CgClose className={css.closeIcon} />
         </button>
         <div className={css.modalContainer}>
-          <SearchFilters />
+          <SearchFilters setSearchParamsUrl={setSearchParamsUrl} />
         </div>
       </div>
     </div>,

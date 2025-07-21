@@ -1,11 +1,13 @@
 import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import {
   selectError,
   selectIsLoading,
   selectPage,
   selectSearchParams,
 } from "../../redux/campers/selectors";
+import { setSearchParams } from "../../redux/campers/slice";
 import { getCampers } from "../../redux/campers/operations";
 import SearchFilters from "../../components/SearchFilters/SearchFilters";
 import FiltersButton from "../../components/FiltersButton/FiltersButton";
@@ -19,15 +21,26 @@ import css from "./CatalogPage.module.css";
 
 const CatalogPage = () => {
   const dispatch = useDispatch();
+  const [searchParamsUrl, setSearchParamsUrl] = useSearchParams();
 
   const loading = useSelector(selectIsLoading);
   const error = useSelector(selectError);
   const page = useSelector(selectPage);
   const searchParams = useSelector(selectSearchParams);
+  const [initialized, setInitialized] = useState(false);
 
   useEffect(() => {
-    dispatch(getCampers({ page, limit: 4, searchParams }));
-  }, [dispatch, page, searchParams]);
+    const location = searchParamsUrl.get("location") || "";
+    const equipment = searchParamsUrl.getAll("equipment") || [];
+    const form = searchParamsUrl.get("form") || "";
+
+    dispatch(setSearchParams({ location, equipment, form }));
+    setInitialized(true);
+  }, [dispatch, searchParamsUrl]);
+
+  useEffect(() => {
+    if (initialized) dispatch(getCampers({ page, limit: 4, searchParams }));
+  }, [dispatch, page, searchParams, initialized]);
 
   return (
     <div>
@@ -37,7 +50,7 @@ const CatalogPage = () => {
 
           <div className={css.contentWrapper}>
             <div className={css.filtes}>
-              <SearchFilters />
+              <SearchFilters setSearchParamsUrl={setSearchParamsUrl} />
             </div>
 
             {error ? <Error /> : <CampersList />}
@@ -45,7 +58,7 @@ const CatalogPage = () => {
           </div>
         </Section>
       </Container>
-      <SearchMenu />
+      <SearchMenu setSearchParamsUrl={setSearchParamsUrl} />
     </div>
   );
 };

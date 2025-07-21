@@ -1,3 +1,9 @@
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
 .link {
   display: flex;
   flex-direction: column;
@@ -27,8 +33,6 @@
   }
 
   .nav {
-    display: flex;
-    align-items: center;
-    gap: 32px;
+    flex-direction: row;
   }
 }
