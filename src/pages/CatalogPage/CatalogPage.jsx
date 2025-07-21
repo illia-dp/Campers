@@ -31,7 +31,14 @@ const CatalogPage = () => {
 
   useEffect(() => {
     const location = searchParamsUrl.get("location") || "";
-    const equipment = searchParamsUrl.getAll("equipment") || [];
+    let equipment = searchParamsUrl.get("equipment");
+
+    if (equipment) {
+      equipment = equipment.split("-");
+    } else {
+      equipment = [];
+    }
+
     const form = searchParamsUrl.get("form") || "";
 
     dispatch(setSearchParams({ location, equipment, form }));

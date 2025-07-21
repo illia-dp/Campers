@@ -4,7 +4,6 @@ import {
   clearSearchParams,
   closeFiltersMenu,
   resetPage,
-  setSearchParams,
 } from "../../redux/campers/slice";
 import { useId } from "react";
 import {
@@ -29,16 +28,13 @@ const SearchFilters = ({ setSearchParamsUrl }) => {
       newSearchParams.set("location", values.location);
     }
     if (values.equipment.length > 0) {
-      values.equipment.forEach((item) =>
-        newSearchParams.append("equipment", item)
-      );
+      newSearchParams.set("equipment", values.equipment.join("-"));
     }
     if (values.form) {
       newSearchParams.set("form", values.form);
     }
 
     setSearchParamsUrl(newSearchParams);
-    dispatch(setSearchParams(values));
     if (filtersMenuOpen) dispatch(closeFiltersMenu());
   };
 
