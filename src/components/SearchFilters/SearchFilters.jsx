@@ -35,6 +35,7 @@ const SearchFilters = ({ setSearchParamsUrl }) => {
     }
 
     setSearchParamsUrl(newSearchParams);
+    dispatch(resetPage());
     if (filtersMenuOpen) dispatch(closeFiltersMenu());
   };
 
