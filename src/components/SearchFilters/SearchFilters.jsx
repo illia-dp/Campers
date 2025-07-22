@@ -11,7 +11,7 @@ import {
   closeFiltersMenu,
   resetPage,
 } from "../../redux/campers/slice";
-import { useId, useState } from "react";
+import { useEffect, useId, useState } from "react";
 import {
   selectIsFiltersMenuOpen,
   selectSearchParams,
@@ -37,11 +37,27 @@ const SearchFilters = ({ setSearchParamsUrl }) => {
   const searchParams = useSelector(selectSearchParams);
   const filtersMenuOpen = useSelector(selectIsFiltersMenuOpen);
 
+  const isMobileOrTablet = window.innerWidth <= 1440;
+
+  useEffect(() => {
+    if (isMobileOrTablet) {
+      setOpenFilters((prevState) => ({
+        ...prevState,
+        equipment: !!searchParams.equipment,
+        type: !!searchParams.form,
+        transmission: !!searchParams.transmission,
+        engine: !!searchParams.engine,
+      }));
+    }
+  }, [searchParams, isMobileOrTablet]);
+
   const toggleFilter = (filterName) => {
-    setOpenFilters((prevState) => ({
-      ...prevState,
-      [filterName]: !prevState[filterName],
-    }));
+    if (isMobileOrTablet) {
+      setOpenFilters((prevState) => ({
+        ...prevState,
+        [filterName]: !prevState[filterName],
+      }));
+    }
   };
 
   const handleSubmit = (values) => {
