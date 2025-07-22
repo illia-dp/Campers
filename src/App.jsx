@@ -1,8 +1,6 @@
 import { Navigate, Route, Routes } from "react-router-dom";
-import { lazy, Suspense } from "react";
-import Header from "./components/Header/Header";
-import Loader from "./components/Loader/Loader";
-import "./App.css";
+import { lazy } from "react";
+import Layout from "./components/Layout/Layout.jsx";
 
 const HomePage = lazy(() => import("./pages/HomePage/HomePage"));
 const CatalogPage = lazy(() => import("./pages/CatalogPage/CatalogPage"));
@@ -16,23 +14,18 @@ const CamperReviews = lazy(() =>
 
 function App() {
   return (
-    <>
-      <Header />
-      <Suspense fallback={<Loader />}>
-        <div className="page-wrapper">
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/catalog" element={<CatalogPage />} />
-            <Route path="/catalog/:id" element={<DetailsPage />}>
-              <Route index element={<Navigate to="features" />} />
-              <Route path="features" element={<CamperFeatures />} />
-              <Route path="reviews" element={<CamperReviews />} />
-            </Route>
-            <Route path="*" element={<Navigate to="/" />} />
-          </Routes>
-        </div>
-      </Suspense>
-    </>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<HomePage />} />
+        <Route path="/catalog" element={<CatalogPage />} />
+        <Route path="/catalog/:id" element={<DetailsPage />}>
+          <Route index element={<Navigate to="features" />} />
+          <Route path="features" element={<CamperFeatures />} />
+          <Route path="reviews" element={<CamperReviews />} />
+        </Route>
+        <Route path="*" element={<Navigate to="/" />} />
+      </Route>
+    </Routes>
   );
 }
 
