@@ -59,8 +59,10 @@
   transition: var(--animation);
 }
 
-.likeBtn:hover .likeIcon {
-  fill: var(--button);
+@media (hover: hover) and (pointer: fine) {
+  .likeBtn:hover .likeIcon {
+    fill: var(--button);
+  }
 }
 
 .likeIcon.liked {
