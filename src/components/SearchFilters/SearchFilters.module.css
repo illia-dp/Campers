@@ -126,6 +126,10 @@
   .checkboxBtn:hover {
     border: 1px solid var(--gray-light);
   }
+
+  .label:hover .arrow {
+    color: var(--main);
+  }
 }
 
 .parametrName {
