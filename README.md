@@ -4,35 +4,6 @@
 
 [illia-dp](https://github.com/illia-dp)
 
-## **Used Libraries**
-
-- **@reduxjs/toolkit** — for state management.
-- **axios** — for making HTTP requests.
-- **clsx** — for conditional class names.
-- **formik** — for handling forms.
-- **modern-normalize** — for normalizing styles.
-- **react** — the core library for building user interfaces.
-- **react-datepicker** — for date picker component.
-- **react-dom** — for DOM rendering.
-- **react-hot-toast** — for beautiful toast notifications.
-- **react-icons** — for icons.
-- **react-redux** — for Redux integration.
-- **react-router-dom** — for routing.
-- **react-spinners** — for displaying loading spinners.
-- **react-svg** — for handling SVG files.
-- **redux-persist** — for persisting Redux state.
-- **yup** — for data validation.
-
-## **Installation and Setup**
-
-1. 📦 Clone the repository using Git:  
-   `git clone https://github.com/illia-dp/Campers.git`
-2. 🔧 Install dependencies:  
-   `npm install` or `yarn install`
-3. 💻 Configure the project by editing the `vite.config.js` file.
-4. 🚀 Run the project locally:  
-   `npm run dev` or `yarn dev`
-
 ## **Campers: Where Creativity Meets Adventure**
 
 Welcome to Campers — a React-powered project where imagination runs wild, and coding becomes an art form!
@@ -93,3 +64,32 @@ This method enhances the usability and functionality of the application by lever
 The application is fully **responsive**, providing a seamless experience across various screen sizes. For tablets and mobile devices, we've implemented a **filter menu** that allows users to easily refine their search. On mobile, an additional **navigation menu** ensures smooth browsing and access to different pages.
 
 To optimize the user interface, the **filter panel** is **animated**—filters appear dynamically based on the selected criteria, preventing the filter list from overwhelming the user and ensuring a cleaner, more intuitive design.
+
+## **Used Libraries**
+
+- **@reduxjs/toolkit** — for state management.
+- **axios** — for making HTTP requests.
+- **clsx** — for conditional class names.
+- **formik** — for handling forms.
+- **modern-normalize** — for normalizing styles.
+- **react** — the core library for building user interfaces.
+- **react-datepicker** — for date picker component.
+- **react-dom** — for DOM rendering.
+- **react-hot-toast** — for beautiful toast notifications.
+- **react-icons** — for icons.
+- **react-redux** — for Redux integration.
+- **react-router-dom** — for routing.
+- **react-spinners** — for displaying loading spinners.
+- **react-svg** — for handling SVG files.
+- **redux-persist** — for persisting Redux state.
+- **yup** — for data validation.
+
+## **Installation and Setup**
+
+1. 📦 Clone the repository using Git:  
+   `git clone https://github.com/illia-dp/Campers.git`
+2. 🔧 Install dependencies:  
+   `npm install` or `yarn install`
+3. 💻 Configure the project by editing the `vite.config.js` file.
+4. 🚀 Run the project locally:  
+   `npm run dev` or `yarn dev`
