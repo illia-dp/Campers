@@ -38,6 +38,10 @@
   height: 56px;
 }
 
+.link {
+  width: 173px;
+}
+
 @media screen and (min-width: 758px) {
   .hero {
     background-position: 25%;
