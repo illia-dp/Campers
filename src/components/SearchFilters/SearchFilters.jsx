@@ -37,6 +37,13 @@ const SearchFilters = ({ setSearchParamsUrl }) => {
   const searchParams = useSelector(selectSearchParams);
   const filtersMenuOpen = useSelector(selectIsFiltersMenuOpen);
 
+  const toggleFilter = (filterName) => {
+    setOpenFilters((prevState) => ({
+      ...prevState,
+      [filterName]: !prevState[filterName],
+    }));
+  };
+
   useEffect(() => {
     setOpenFilters((prevState) => ({
       ...prevState,
@@ -46,13 +53,6 @@ const SearchFilters = ({ setSearchParamsUrl }) => {
       engine: !!searchParams.engine,
     }));
   }, [searchParams]);
-
-  const toggleFilter = (filterName) => {
-    setOpenFilters((prevState) => ({
-      ...prevState,
-      [filterName]: !prevState[filterName],
-    }));
-  };
 
   const handleSubmit = (values) => {
     const newSearchParams = new URLSearchParams();
@@ -170,6 +170,7 @@ const SearchFilters = ({ setSearchParamsUrl }) => {
                   type="button"
                   onClick={() => {
                     if (!isFormEmpty) handleReset();
+                    setOpenFilters(initialState);
                   }}
                   aria-label="Clear filters"
                 >
