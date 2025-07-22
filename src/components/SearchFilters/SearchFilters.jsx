@@ -37,27 +37,21 @@ const SearchFilters = ({ setSearchParamsUrl }) => {
   const searchParams = useSelector(selectSearchParams);
   const filtersMenuOpen = useSelector(selectIsFiltersMenuOpen);
 
-  const isMobileOrTablet = window.innerWidth <= 1440;
-
   useEffect(() => {
-    if (isMobileOrTablet) {
-      setOpenFilters((prevState) => ({
-        ...prevState,
-        equipment: !!searchParams.equipment,
-        type: !!searchParams.form,
-        transmission: !!searchParams.transmission,
-        engine: !!searchParams.engine,
-      }));
-    }
-  }, [searchParams, isMobileOrTablet]);
+    setOpenFilters((prevState) => ({
+      ...prevState,
+      equipment: !!searchParams.equipment,
+      type: !!searchParams.form,
+      transmission: !!searchParams.transmission,
+      engine: !!searchParams.engine,
+    }));
+  }, [searchParams]);
 
   const toggleFilter = (filterName) => {
-    if (isMobileOrTablet) {
-      setOpenFilters((prevState) => ({
-        ...prevState,
-        [filterName]: !prevState[filterName],
-      }));
-    }
+    setOpenFilters((prevState) => ({
+      ...prevState,
+      [filterName]: !prevState[filterName],
+    }));
   };
 
   const handleSubmit = (values) => {
