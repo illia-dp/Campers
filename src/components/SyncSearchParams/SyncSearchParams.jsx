@@ -25,6 +25,18 @@ const SyncSearchParams = () => {
     } else {
       setFieldValue("form", "");
     }
+
+    if (searchParams.transmission !== "") {
+      setFieldValue("transmission", searchParams.transmission);
+    } else {
+      setFieldValue("transmission", "");
+    }
+
+    if (searchParams.engine !== "") {
+      setFieldValue("engine", searchParams.engine);
+    } else {
+      setFieldValue("engine", "");
+    }
   }, [searchParams, setFieldValue]);
 
   return null;

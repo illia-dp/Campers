@@ -30,18 +30,20 @@ const CatalogPage = () => {
   const [initialized, setInitialized] = useState(false);
 
   useEffect(() => {
-    const location = searchParamsUrl.get("location") || "";
-    let equipment = searchParamsUrl.get("equipment");
+    const getParam = (key) => {
+      const value = searchParamsUrl.get(key);
+      return value ? (key === "equipment" ? value.split("-") : value) : "";
+    };
 
-    if (equipment) {
-      equipment = equipment.split("-");
-    } else {
-      equipment = [];
-    }
+    const location = getParam("location");
+    const equipment = getParam("equipment", []);
+    const form = getParam("form");
+    const transmission = getParam("transmission");
+    const engine = getParam("engine");
 
-    const form = searchParamsUrl.get("form") || "";
-
-    dispatch(setSearchParams({ location, equipment, form }));
+    dispatch(
+      setSearchParams({ location, equipment, form, transmission, engine })
+    );
     setInitialized(true);
   }, [dispatch, searchParamsUrl]);
 

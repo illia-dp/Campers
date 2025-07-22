@@ -6,7 +6,11 @@ const CamperParams = ({ camper }) => {
     <div className={css.parameters}>
       <div className={css.parametr}>
         <svg className={css.iconWrapper}>
-          <use xlinkHref={`${sprite}#icon-transmission`} />
+          <use
+            xlinkHref={`${sprite}#icon-transmission${
+              camper.transmission === "automatic" ? "-auto" : ""
+            }`}
+          />
         </svg>
         <p className={css.parametrName}>
           {camper.transmission.charAt(0).toUpperCase() +
@@ -16,7 +20,15 @@ const CamperParams = ({ camper }) => {
 
       <div className={css.parametr}>
         <svg className={css.iconWrapper}>
-          <use xlinkHref={`${sprite}#icon-fuel-pump`} />
+          <use
+            xlinkHref={`${sprite}#icon-fuel-${
+              camper.engine === "petrol"
+                ? "pump"
+                : camper.engine === "diesel"
+                ? "pump-diesel"
+                : "hybrid"
+            }`}
+          />
         </svg>
         <p className={css.parametrName}>
           {camper.engine.charAt(0).toUpperCase() + camper.engine.slice(1)}

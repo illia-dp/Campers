@@ -8,24 +8,29 @@ export const instance = axios.create({
 export const getCampers = createAsyncThunk(
   "campers/getCampers",
   async ({ page = 1, limit = 4, searchParams }, { rejectWithValue }) => {
-    const params = {
-      page,
-      limit,
+    const params = { page, limit };
+
+    const addParam = (key, value) => {
+      if (value && (Array.isArray(value) ? value.length > 0 : true)) {
+        if (Array.isArray(value)) {
+          value.forEach((item) => {
+            params[item] = true;
+          });
+        } else {
+          params[key] = value;
+        }
+      }
     };
 
-    if (searchParams.location && searchParams.location) {
-      params.location = searchParams.location;
-    }
+    const filterKeys = [
+      "location",
+      "equipment",
+      "form",
+      "transmission",
+      "engine",
+    ];
 
-    if (searchParams.equipment && searchParams.equipment.length > 0) {
-      searchParams.equipment.forEach((item) => {
-        params[item] = true;
-      });
-    }
-
-    if (searchParams.form && searchParams.form) {
-      params.form = searchParams.form;
-    }
+    filterKeys.forEach((key) => addParam(key, searchParams[key]));
 
     try {
       const { data } = await instance.get("/campers", {

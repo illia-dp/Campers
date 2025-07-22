@@ -17,6 +17,8 @@ const slice = createSlice({
       location: "",
       equipment: [],
       form: "",
+      transmission: "",
+      engine: "",
     },
     filtersMenuIsOpen: false,
     mobileMenuIsOpen: false,
@@ -47,6 +49,8 @@ const slice = createSlice({
         location: "",
         equipment: [],
         form: "",
+        transmission: "",
+        engine: "",
       };
     },
     openFiltersMenu(state) {
