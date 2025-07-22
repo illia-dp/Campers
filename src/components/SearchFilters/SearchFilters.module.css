@@ -122,6 +122,12 @@
   border: 1px solid var(--button);
 }
 
+@media (pointer: coarse) {
+  .checkboxBtn:hover {
+    border: 1px solid var(--gray-light);
+  }
+}
+
 .parametrName {
   font-weight: 500;
   font-size: 14px;
