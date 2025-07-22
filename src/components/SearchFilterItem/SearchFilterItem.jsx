@@ -14,9 +14,19 @@ const SearchFilterItem = ({
   values,
   isCheckbox = false,
 }) => {
+  const isDesktop = window.innerWidth > 1440;
+
+  const handleClick = (event) => {
+    if (isDesktop) {
+      event.stopPropagation(); // Останавливаем обработку клика
+      return; // Ничего не делаем при ширине экрана > 1440px
+    }
+    toggleFilter(filterName);
+  };
+
   return (
     <>
-      <div className={css.label} onClick={() => toggleFilter(filterName)}>
+      <div className={css.label} onClick={handleClick}>
         {label}
         <button type="button" className={css.toggleButton}>
           <FaChevronDown

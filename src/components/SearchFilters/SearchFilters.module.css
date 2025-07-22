@@ -195,3 +195,20 @@
     height: 56px;
   }
 }
+
+@media screen and (min-width: 1440px) {
+  .label {
+    pointer-events: none;
+  }
+
+  .arrow {
+    display: none;
+  }
+
+  .equipmentList {
+    max-height: 400px;
+    opacity: 1;
+    margin-bottom: 32px;
+    transform: translateY(0);
+  }
+}
