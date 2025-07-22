@@ -4,16 +4,6 @@
 
 [illia-dp](https://github.com/illia-dp)
 
-## **Installation and Setup**
-
-1. 📦 Clone the repository using Git:  
-   `git clone https://github.com/illia-dp/Campers.git`
-2. 🔧 Install dependencies:  
-   `npm install` or `yarn install`
-3. 💻 Configure the project by editing the `vite.config.js` file.
-4. 🚀 Run the project locally:  
-   `npm run dev` or `yarn dev`
-
 ## **Used Libraries**
 
 - **@reduxjs/toolkit** — for state management.
@@ -33,9 +23,19 @@
 - **redux-persist** — for persisting Redux state.
 - **yup** — for data validation.
 
+## **Installation and Setup**
+
+1. 📦 Clone the repository using Git:  
+   `git clone https://github.com/illia-dp/Campers.git`
+2. 🔧 Install dependencies:  
+   `npm install` or `yarn install`
+3. 💻 Configure the project by editing the `vite.config.js` file.
+4. 🚀 Run the project locally:  
+   `npm run dev` or `yarn dev`
+
 ## **Campers: Where Creativity Meets Adventure**
 
-Welcome to Campers — a React-powered project where imagination runs wild, and coding becomes an art form! Whether you're an experienced developer or a newcomer, our community is here to help you start your journey into the world of programming.
+Welcome to Campers — a React-powered project where imagination runs wild, and coding becomes an art form!
 
 ## **Campers' Tech Stack**
 
@@ -46,18 +46,42 @@ We stick to reliable and time-tested tools. Our tech roster includes:
 - **ESLint**: Our coding camp counselor, keeping our code neat and tidy.
 - **TypeScript**: Coming soon for enhanced type safety (stay tuned!).
 
-## **Emoji Escape Artist**
+---
 
-When you're stuck in a bug rut or need a break from coding, let our cute and colorful emojis bring a smile to your face! 💡🏕️
+## Home Page 🏠
 
-## **The Campsite Rules**
+The Home Page is the main entry point to the project, providing a welcoming interface and easy navigation.
 
-1. **Honor the outdoors**: Respect others' code and don't hog the Wi-Fi.
-2. **Collaboration station**: Share your ideas and help your fellow campers.
-3. **Code safely**: Be mindful of the impact your code has on the environment.
+![Home Page Screenshot](assets/screenshots/home-page.png)
 
-## **Campervan Café**
+---
 
-After a long day of coding, join us at the café for story time and snack swapping!
+## Catalog Page 📑
 
-Don’t forget to pack your sense of adventure and your coding skills, and join us at Campers for a hacktastic experience like no other! 🏕️💻
+The Catalog Page allows users to search for campers based on various parameters. You can also save campers to your favorites and click on the "More Info" button to navigate to the Details Page.
+
+![Catalog Page Screenshot](assets/screenshots/catalog-page.png)
+
+---
+
+## Details Page 📄
+
+On the Details Page, you'll find detailed information about a specific camper. It also includes two nested routes for the camper's details and reviews. Additionally, there's a booking form for reservations.
+
+![Details Page Screenshot](assets/screenshots/details-page.png)
+![Features Screenshot](assets/screenshots/features-page.png)
+![Reviews Screenshot](assets/screenshots/reviews-page.png)
+
+---
+
+## **Advanced URL Parameter Handling** 🌐
+
+Our application makes extensive use of **URL parameters** for dynamic query management and advanced filtering. This allows users to directly interact with the application by modifying the URL to reflect specific search criteria or form inputs. This approach provides a seamless user experience, akin to professional websites that allow bookmarking, sharing, and revisiting specific app states without losing context.
+
+### Key Features:
+
+- **Dynamic Search and Filtering**: URL parameters are utilized to reflect the search criteria, enabling users to bookmark or share search results.
+- **Form Data Persistence**: When users interact with the form (for example, booking a camper), the filled form values are reflected in the URL, allowing users to revisit or share the exact state of the form.
+- **Deep Linking**: Each state of the application (such as filtered catalogs or selected camper details) has its own unique URL, enabling deep linking to specific pages or sections.
+
+This method enhances the usability and functionality of the application by leveraging the full power of the browser's URL and history management, which is a standard practice in modern web applications.
