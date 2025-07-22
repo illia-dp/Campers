@@ -8,6 +8,32 @@
 
 Welcome to Campers — a React-powered project where imagination runs wild, and coding becomes an art form!
 
+<details>
+  <summary style="font-size: 1.5em; font-weight: bold; color: #007acc; cursor: pointer;">
+    Table of Contents
+  </summary>
+
+  <ul>
+    <li><a href="#campers-project-overview">Campers Project Overview</a></li>
+    <li><a href="#campers-tech-stack">Campers' Tech Stack</a></li>
+    <li><a href="#home-page">Home Page</a></li>
+    <li><a href="#catalog-page">Catalog Page</a></li>
+    <li><a href="#details-page">Details Page</a></li>
+    <li><a href="#advanced-url-parameter-handling">Advanced URL Parameter Handling</a></li>
+    <li><a href="#responsive-design-and-mobile-optimization">Responsive Design and Mobile Optimization</a></li>
+    <li><a href="#used-libraries">Used Libraries</a></li>
+    <li><a href="#installation-and-setup">Installation and Setup</a></li>
+  </ul>
+</details>
+
+---
+
+## **Campers Project Overview**
+
+Campers is a project where creativity meets adventure. Here, you can find a variety of campers and book them for your next journey! The project is built using **React** and follows modern development practices for creating user interfaces.
+
+---
+
 ## **Campers' Tech Stack**
 
 We stick to reliable and time-tested tools. Our tech roster includes:
@@ -19,7 +45,7 @@ We stick to reliable and time-tested tools. Our tech roster includes:
 
 ---
 
-## Home Page 🏠
+## Home Page
 
 The Home Page is the main entry point to the project, providing a welcoming interface and easy navigation.
 
@@ -27,7 +53,7 @@ The Home Page is the main entry point to the project, providing a welcoming inte
 
 ---
 
-## Catalog Page 📑
+## Catalog Page
 
 The Catalog Page allows users to search for campers based on various parameters. You can also save campers to your favorites and click on the "More Info" button to navigate to the Details Page.
 
@@ -35,7 +61,7 @@ The Catalog Page allows users to search for campers based on various parameters.
 
 ---
 
-## Details Page 📄
+## Details Page
 
 On the Details Page, you'll find detailed information about a specific camper. It also includes two nested routes for the camper's details and reviews. Additionally, there's a booking form for reservations.
 
@@ -45,7 +71,7 @@ On the Details Page, you'll find detailed information about a specific camper. I
 
 ---
 
-## **Advanced URL Parameter Handling** 🌐
+## **Advanced URL Parameter Handling**
 
 Our application makes extensive use of **URL parameters** for dynamic query management and advanced filtering. This allows users to directly interact with the application by modifying the URL to reflect specific search criteria or form inputs. This approach provides a seamless user experience, akin to professional websites that allow bookmarking, sharing, and revisiting specific app states without losing context.
 
@@ -59,11 +85,13 @@ This method enhances the usability and functionality of the application by lever
 
 ---
 
-## **Responsive Design and Mobile Optimization** 📱💻
+## **Responsive Design and Mobile Optimization**
 
 The application is fully **responsive**, providing a seamless experience across various screen sizes. For tablets and mobile devices, we've implemented a **filter menu** that allows users to easily refine their search. On mobile, an additional **navigation menu** ensures smooth browsing and access to different pages.
 
 To optimize the user interface, the **filter panel** is **animated**—filters appear dynamically based on the selected criteria, preventing the filter list from overwhelming the user and ensuring a cleaner, more intuitive design.
+
+---
 
 ## **Used Libraries**
 
@@ -83,6 +111,8 @@ To optimize the user interface, the **filter panel** is **animated**—filters a
 - **react-svg** — for handling SVG files.
 - **redux-persist** — for persisting Redux state.
 - **yup** — for data validation.
+
+---
 
 ## **Installation and Setup**
 
