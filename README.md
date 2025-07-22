@@ -52,7 +52,7 @@ We stick to reliable and time-tested tools. Our tech roster includes:
 
 The Home Page is the main entry point to the project, providing a welcoming interface and easy navigation.
 
-![Home Page Screenshot](assets/screenshots/home-page.png)
+![Home Page Screenshot](./src/assets/screenshots/home-page.webp)
 
 ---
 
@@ -60,7 +60,7 @@ The Home Page is the main entry point to the project, providing a welcoming inte
 
 The Catalog Page allows users to search for campers based on various parameters. You can also save campers to your favorites and click on the "More Info" button to navigate to the Details Page.
 
-![Catalog Page Screenshot](assets/screenshots/catalog-page.png)
+![Catalog Page Screenshot](./src/assets/screenshots/catalog-page.webp)
 
 ---
 
@@ -68,9 +68,9 @@ The Catalog Page allows users to search for campers based on various parameters.
 
 On the Details Page, you'll find detailed information about a specific camper. It also includes two nested routes for the camper's details and reviews. Additionally, there's a booking form for reservations.
 
-![Details Page Screenshot](assets/screenshots/details-page.png)
-![Features Screenshot](assets/screenshots/features-page.png)
-![Reviews Screenshot](assets/screenshots/reviews-page.png)
+![Details Page Screenshot](./src/assets/screenshots/details-page.webp)
+![Features Screenshot](./src/assets/screenshots/features-page.webp)
+![Reviews Screenshot](./src/assets/screenshots/reviews-page.webp)
 
 ---
 
