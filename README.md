@@ -85,3 +85,11 @@ Our application makes extensive use of **URL parameters** for dynamic query mana
 - **Deep Linking**: Each state of the application (such as filtered catalogs or selected camper details) has its own unique URL, enabling deep linking to specific pages or sections.
 
 This method enhances the usability and functionality of the application by leveraging the full power of the browser's URL and history management, which is a standard practice in modern web applications.
+
+---
+
+## **Responsive Design and Mobile Optimization** 📱💻
+
+The application is fully **responsive**, providing a seamless experience across various screen sizes. For tablets and mobile devices, we've implemented a **filter menu** that allows users to easily refine their search. On mobile, an additional **navigation menu** ensures smooth browsing and access to different pages.
+
+To optimize the user interface, the **filter panel** is **animated**—filters appear dynamically based on the selected criteria, preventing the filter list from overwhelming the user and ensuring a cleaner, more intuitive design.
