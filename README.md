@@ -9,22 +9,18 @@
 Welcome to Campers — a React-powered project where imagination runs wild, and coding becomes an art form!
 
 <details>
-  <summary style="font-size: 1.5em; font-weight: bold; color: #007acc; cursor: pointer;">
-    Table of Contents
-  </summary>
+  <summary><strong>📚 Table of Contents</strong></summary>
 
-  <ul>
-    <li><a href="#campers-project-overview">Campers Project Overview</a></li>
-    <li><a href="#campers-tech-stack">Campers' Tech Stack</a></li>
-    <li><a href="#home-page">Home Page</a></li>
-    <li><a href="#catalog-page">Catalog Page</a></li>
-    <li><a href="#details-page">Details Page</a></li>
-    <li><a href="#advanced-url-parameter-handling">Advanced URL Parameter Handling</a></li>
-    <li><a href="#responsive-design-and-mobile-optimization">Responsive Design and Mobile Optimization</a></li>
-    <li><a href="#used-libraries">Used Libraries</a></li>
-    <li><a href="#live-demo">Live Demo</a></li>
-    <li><a href="#installation-and-setup">Installation and Setup</a></li>
-  </ul>
+- [📖 Campers Project Overview](#campers-project-overview)
+- [🛠️ Campers' Tech Stack](#campers-tech-stack)
+- [🏠 Home Page](#home-page)
+- [📂 Catalog Page](#catalog-page)
+- [🔍 Details Page](#details-page)
+- [⚙️ Advanced URL Parameter Handling](#advanced-url-parameter-handling)
+- [📱 Responsive Design and Mobile Optimization](#responsive-design-and-mobile-optimization)
+- [📦 Used Libraries](#used-libraries)
+- [🚀 Live Demo](#live-demo)
+- [🧰 Installation and Setup](#installation-and-setup)
 </details>
 
 ---
@@ -66,9 +62,18 @@ The Catalog Page allows users to search for campers based on various parameters.
 
 On the Details Page, you'll find detailed information about a specific camper. It also includes two nested routes for the camper's details and reviews. Additionally, there's a booking form for reservations.
 
-![Details Page Screenshot](./src/assets/screenshots/details-page.webp)
-![Features Screenshot](./src/assets/screenshots/features-page.webp)
-![Reviews Screenshot](./src/assets/screenshots/reviews-page.webp)
+<img src="./src/assets/screenshots/details-page.webp" alt="Details Page Screenshot" width="100%" />
+
+<br />
+
+**Camper Tabs: Features and Reviews**
+
+<table>
+  <tr>
+    <td><img src="./src/assets/screenshots/features-page.webp" alt="Features Screenshot" width="100%" /></td>
+    <td><img src="./src/assets/screenshots/reviews-page.webp" alt="Reviews Screenshot" width="100%" /></td>
+  </tr>
+</table>
 
 ---
 
@@ -136,6 +141,5 @@ You can:
    `git clone https://github.com/illia-dp/Campers.git`
 2. 🔧 Install dependencies:  
    `npm install` or `yarn install`
-3. 💻 Configure the project by editing the `vite.config.js` file.
-4. 🚀 Run the project locally:  
+3. 🚀 Run the project locally:  
    `npm run dev` or `yarn dev`
