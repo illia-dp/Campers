@@ -20,8 +20,8 @@ import SearchFilterItem from "../SearchFilterItem/SearchFilterItem";
 import SyncSearchParams from "../SyncSearchParams/SyncSearchParams";
 import Button from "../Button/Button";
 import sprite from "../../assets/sprite.svg";
-import css from "./SearchFilters.module.css";
 import clsx from "clsx";
+import css from "./SearchFilters.module.css";
 
 const initialState = {
   equipment: false,

@@ -102,8 +102,10 @@
   transition: var(--animation);
 }
 
-.link:hover {
-  border-bottom: 4px solid var(--button);
+@media (hover: hover) and (pointer: fine) {
+  .link:hover {
+    border-bottom: 4px solid var(--button);
+  }
 }
 
 .active {

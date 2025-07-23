@@ -16,16 +16,18 @@
   color: var(--white);
 }
 
-.confirm:hover {
-  background-color: var(--button-hover);
-}
-
 .more {
   border: 1px solid var(--gray-light);
   background-color: transparent;
   color: var(--main);
 }
 
-.more:hover {
-  border: 1px solid var(--button-hover);
+@media (hover: hover) and (pointer: fine) {
+  .confirm:hover {
+    background-color: var(--button-hover);
+  }
+
+  .more:hover {
+    border: 1px solid var(--button-hover);
+  }
 }

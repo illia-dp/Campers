@@ -1,6 +1,6 @@
-import { useEffect } from "react";
 import { useFormikContext } from "formik";
 import { useSelector } from "react-redux";
+import { useEffect } from "react";
 import { selectSearchParams } from "../../redux/campers/selectors";
 
 const SyncSearchParams = () => {

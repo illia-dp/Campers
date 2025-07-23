@@ -83,16 +83,17 @@ const CampersListItem = ({ camper }) => {
         <div className={css.parameters}>
           <CamperParams camper={camper} />
         </div>
-
-        <Link to={`/catalog/${camper.id}/features`}>
-          <Button
-            className={css.button}
-            style="confirm"
-            aria-label="Details about selected camper"
-          >
-            Show more
-          </Button>
-        </Link>
+        <div className={css.link}>
+          <Link to={`/catalog/${camper.id}/features`}>
+            <Button
+              className={css.button}
+              style="confirm"
+              aria-label="Details about selected camper"
+            >
+              Show more
+            </Button>
+          </Link>
+        </div>
       </div>
     </li>
   );
