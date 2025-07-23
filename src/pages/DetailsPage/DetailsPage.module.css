@@ -102,6 +102,21 @@
   transition: var(--animation);
 }
 
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 34px 0 32px 0;
+}
+
+.form {
+  border: 1px solid var(--gray-light);
+  border-radius: 10px;
+  padding: 44px;
+  width: 335px;
+  height: 636px;
+}
+
 @media (hover: hover) and (pointer: fine) {
   .link:hover {
     border-bottom: 4px solid var(--button);
@@ -122,6 +137,11 @@
     width: 208px;
     height: 235px;
   }
+
+  .form {
+    width: 672px;
+    height: 588px;
+  }
 }
 
 @media screen and (min-width: 1440px) {
@@ -133,5 +153,13 @@
   .imageThumb {
     width: 280px;
     height: 320px;
+  }
+
+  .wrapper {
+    flex-direction: row;
+  }
+
+  .form {
+    width: 641px;
   }
 }

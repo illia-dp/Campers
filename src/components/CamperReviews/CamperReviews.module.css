@@ -1,12 +1,15 @@
-.wrapper {
+.noReviews {
   display: flex;
-  flex-direction: column;
-  gap: 40px;
-  padding: 34px 0 32px 0;
+  justify-content: center;
+  width: 335px;
+  max-height: 500px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text);
 }
 
 .reviews {
-  border-radius: 10px;
   width: 335px;
   max-height: 500px;
   overflow: hidden;
@@ -73,36 +76,15 @@
   color: var(--text);
 }
 
-.form {
-  border: 1px solid var(--gray-light);
-  border-radius: 10px;
-  padding: 44px;
-  width: 335px;
-  height: 636px;
-}
-
 @media screen and (min-width: 768px) {
   .reviews {
     width: 672px;
     max-height: 500px;
   }
-
-  .form {
-    width: 672px;
-    height: 588px;
-  }
 }
 
 @media screen and (min-width: 1440px) {
-  .wrapper {
-    flex-direction: row;
-  }
-
   .reviews {
     width: 631px;
-  }
-
-  .form {
-    width: 641px;
   }
 }

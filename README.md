@@ -22,6 +22,7 @@ Welcome to Campers — a React-powered project where imagination runs wild, and 
     <li><a href="#advanced-url-parameter-handling">Advanced URL Parameter Handling</a></li>
     <li><a href="#responsive-design-and-mobile-optimization">Responsive Design and Mobile Optimization</a></li>
     <li><a href="#used-libraries">Used Libraries</a></li>
+    <li><a href="#live-demo">Live Demo</a></li>
     <li><a href="#installation-and-setup">Installation and Setup</a></li>
   </ul>
 </details>
@@ -41,7 +42,7 @@ We stick to reliable and time-tested tools. Our tech roster includes:
 - **React**: Our trusty library for building innovative user interfaces.
 - **Vite**: Our fast tool for rapid development and deployment.
 - **ESLint**: Our coding camp counselor, keeping our code neat and tidy.
-- **TypeScript**: Coming soon for enhanced type safety (stay tuned!).
+- **TypeScript**: Strongly typed support for better development experience and fewer bugs.
 
 ---
 
@@ -89,7 +90,7 @@ This method enhances the usability and functionality of the application by lever
 
 The application is fully **responsive**, providing a seamless experience across various screen sizes. For tablets and mobile devices, we've implemented a **filter menu** that allows users to easily refine their search. On mobile, an additional **navigation menu** ensures smooth browsing and access to different pages.
 
-To optimize the user interface, the **filter panel** is **animated**—filters appear dynamically based on the selected criteria, preventing the filter list from overwhelming the user and ensuring a cleaner, more intuitive design.
+To optimize the user interface, the **filter panel inside the mobile filter menu is animated**—filters appear dynamically based on the selected criteria, preventing the list from overwhelming the user and ensuring a cleaner, more intuitive design.
 
 ---
 
@@ -111,6 +112,21 @@ To optimize the user interface, the **filter panel** is **animated**—filters a
 - **react-svg** — for handling SVG files.
 - **redux-persist** — for persisting Redux state.
 - **yup** — for data validation.
+
+---
+
+## **Live Demo**
+
+Explore the live version of the Campers project here:
+
+🔗 [Campers Live Demo](https://campers-black.vercel.app/)
+
+You can:
+
+- Browse the full camper catalog
+- View detailed camper features and reviews
+- Book a camper using a responsive form
+- Enjoy a fully adaptive and mobile-friendly experience
 
 ---
 
