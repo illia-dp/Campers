@@ -1,18 +1,18 @@
-# Campers Project 🌄🏕️⛺🚙🏔️🌊
+# TravelTrucks Project 🌄🏕️⛺🚙🏔️🌊
 
 ## **Author**
 
 [illia-dp](https://github.com/illia-dp)
 
-## **Campers: Where Creativity Meets Adventure**
+## **TravelTrucks: Where Creativity Meets Adventure**
 
-Welcome to Campers — a React-powered project where imagination runs wild, and coding becomes an art form!
+Welcome to TravelTrucks — a React-powered project where imagination runs wild, and coding becomes an art form!
 
 <details>
   <summary><strong>📚 Table of Contents</strong></summary>
 
-- [📖 Campers Project Overview](#campers-project-overview)
-- [🛠️ Campers' Tech Stack](#campers-tech-stack)
+- [📖 TravelTrucks Project Overview](#traveltrucks-project-overview)
+- [🛠️ TravelTrucks Tech Stack](#traveltrucks-tech-stack)
 - [🏠 Home Page](#home-page)
 - [📂 Catalog Page](#catalog-page)
 - [🔍 Details Page](#details-page)
@@ -25,13 +25,13 @@ Welcome to Campers — a React-powered project where imagination runs wild, and 
 
 ---
 
-## **Campers Project Overview**
+## **TravelTrucks Project Overview**
 
-Campers is a project where creativity meets adventure. Here, you can find a variety of campers and book them for your next journey! The project is built using **React** and follows modern development practices for creating user interfaces.
+TravelTrucks is a project where creativity meets adventure. Here, you can find a variety of campers and book them for your next journey! The project is built using **React** and follows modern development practices for creating user interfaces.
 
 ---
 
-## **Campers' Tech Stack**
+## **TravelTrucks Tech Stack**
 
 We stick to reliable and time-tested tools. Our tech roster includes:
 
@@ -66,7 +66,7 @@ On the Details Page, you'll find detailed information about a specific camper. I
 
 <br />
 
-**Camper Tabs: Features and Reviews**
+**TravelTrucks Tabs: Features and Reviews**
 
 <table>
   <tr>
@@ -122,9 +122,9 @@ To optimize the user interface, the **filter panel inside the mobile filter menu
 
 ## **Live Demo**
 
-Explore the live version of the Campers project here:
+Explore the live version of the TravelTrucks project here:
 
-🔗 [Campers Live Demo](https://campers-black.vercel.app/)
+🔗 [TravelTrucks Live Demo](https://travel-trucks-81kk.vercel.app/)
 
 You can:
 
@@ -138,7 +138,7 @@ You can:
 ## **Installation and Setup**
 
 1. 📦 Clone the repository using Git:  
-   `git clone https://github.com/illia-dp/Campers.git`
+   `git clone https://github.com/illia-dp/TravelTrucks.git`
 2. 🔧 Install dependencies:  
    `npm install` or `yarn install`
 3. 🚀 Run the project locally:  
