@@ -124,7 +124,7 @@ To optimize the user interface, the **filter panel inside the mobile filter menu
 
 Explore the live version of the TravelTrucks project here:
 
-🔗 [TravelTrucks Live Demo](https://travel-trucks-81kk.vercel.app/)
+🔗 [TravelTrucks Live Demo](https://travel-trucks-nine-plum.vercel.app/)
 
 You can:
 
